@@ -19,7 +19,7 @@
   });
 
   /* ---- reveal on scroll ---- */
-  const els = document.querySelectorAll('.sec-h, .c, .row, .spec, .refs li, .figures > div, .award');
+  const els = document.querySelectorAll('.sec-h, .c, .row, .spec, .refs li, .figures > div, .award, .fe');
   els.forEach(e => e.classList.add('rv'));
   const io = new IntersectionObserver(es => es.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }

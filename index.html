@@ -24,7 +24,7 @@
   <span class="hide-sm">content_type: engineer</span>
   <span>status <i class="dot"></i> published</span>
   <nav>
-    <a href="#log">log</a><a href="#schema">schema</a><a href="#specimens">work</a><a href="#refs">refs</a><a href="#publish">contact</a>
+    <a href="#log">log</a><a href="#schema">schema</a><a href="#specimens">work</a><a href="#frontend">front end</a><a href="#refs">refs</a><a href="#publish">contact</a>
   </nav>
 </header>
 
@@ -58,7 +58,7 @@
       <ol class="diff-body" id="diffBody">
         <li><span class="k">title</span> <del>Application Engineer</del> <ins>Senior Software Engineer II</ins></li>
         <li><span class="k">editor</span> <del>AngularJS</del> <ins>React, owned for 6 years</ins></li>
-        <li><span class="k">database</span> <del>MongoDB 6</del> <ins>MongoDB 7, no regressions shipped</ins></li>
+        <li><span class="k">components</span> <del>copy-pasted</del> <ins>Storybook design system</ins></li>
         <li><span class="k">api</span> <del>contributor</del> <ins>primary maintainer, 3 years</ins></li>
         <li><span class="k">agents</span> <del>null</del> <ins>read product context via MCP</ins></li>
       </ol>
@@ -74,7 +74,7 @@
   <div><b data-count="10">10</b><span>years on one platform. That's long enough to live with your own decisions.</span></div>
   <div><b data-count="3">3</b><span>years as primary maintainer of the public content API</span></div>
   <div><b data-count="6">6</b><span>years owning the React editor's front end, across regions</span></div>
-  <div><b data-count="14">14</b><span>months to take a live API from MongoDB 6 to 7</span></div>
+  <div><b data-count="2">2</b><span>shared component libraries I contributed to</span></div>
   <div><b data-count="4">4</b><span>months from PRD to shipped, full stack</span></div>
 </section>
 
@@ -90,7 +90,7 @@
         <p class="where">Contentstack · Pune · Sep 2024 – now</p>
         <ul>
           <li>Designed and shipped <strong>content branching with compare&#8209;and&#8209;merge</strong> across the API service, the permissions layer and the client. Wrote the public API spec and took it through cross-functional sign-off.</li>
-          <li>Took a production API from <strong>MongoDB 6 to 7</strong>. Documented the query-level breakages, including a regex change that broke listing endpoints, and saw the 14-month effort through to the end.</li>
+          <li>Built front-end features in the CMS editor, including <strong>taxonomy</strong>, <strong>field visibility rules</strong> and <strong>two-factor authentication</strong>, on shared React components documented in Storybook.</li>
           <li>Built the <strong>Product Wiki</strong>, the single source of product context for developer tools, apps and the AI agents that work on them.</li>
         </ul>
       </div>
@@ -201,22 +201,72 @@
   </aside>
 </section>
 
+<!-- ============ FRONT END ============ -->
+<section id="frontend" class="sec">
+  <h2 class="sec-h"><span class="num">§4</span> Front-end ledger<small>features I built in the browser, line by line</small></h2>
+
+  <div class="ledger">
+    <article class="fe">
+      <svg viewBox="0 0 120 64" aria-hidden="true"><path class="ln" d="M14 10 V54 M14 22 H34 M14 40 H34 M44 22 V48 M44 34 H62 M44 48 H62"/><rect x="4" y="4" width="20" height="10" class="bx"/><rect x="34" y="17" width="20" height="10" class="bx"/><rect x="34" y="35" width="20" height="10" class="bx f"/><rect x="62" y="29" width="22" height="10" class="bx"/><rect x="62" y="43" width="22" height="10" class="bx"/></svg>
+      <code>&lt;TaxonomyTree /&gt;</code>
+      <h3>Taxonomy</h3>
+      <p>A nested tree editor for organising content into categories. Authors add, rename, re-parent and reorder terms, then tag entries with them. It stays fast and keyboard-friendly even when a taxonomy runs thousands of terms deep.</p>
+    </article>
+
+    <article class="fe">
+      <svg viewBox="0 0 120 64" aria-hidden="true"><rect x="4" y="6" width="50" height="12" class="bx"/><text x="8" y="15">type = video</text><path class="ln dash" d="M56 12 H70"/><rect x="72" y="6" width="44" height="12" class="bx f"/><rect x="72" y="24" width="44" height="12" class="bx"/><rect x="72" y="42" width="44" height="12" class="bx off"/><path class="ln" d="M76 48 H112"/></svg>
+      <code>visibility: when(field).is(value)</code>
+      <h3>Field visibility rules</h3>
+      <p>Content modellers write rules like "show the video URL only when the type is Video", and the entry editor shows or hides fields live as authors type. The rule builder, the evaluation engine and the form all had to agree on every edge case.</p>
+    </article>
+
+    <article class="fe">
+      <svg viewBox="0 0 120 64" aria-hidden="true"><rect x="40" y="4" width="40" height="56" rx="5" class="bx"/><g class="otp"><rect x="45" y="24" width="7" height="12" class="bx f"/><rect x="54" y="24" width="7" height="12" class="bx f"/><rect x="63" y="24" width="7" height="12" class="bx"/><rect x="72" y="24" width="4" height="12" class="bx"/></g><path class="ln" d="M52 50 H68"/><circle cx="60" cy="13" r="3"/></svg>
+      <code>&lt;TwoFactorSetup /&gt;</code>
+      <h3>Two-factor authentication</h3>
+      <p>The full 2FA flow: enrolment with an authenticator-app QR code, one-time-code entry, recovery codes and organisation-level enforcement. Security UI has to stay calm, clear and accessible, because a confused user here is a locked-out user.</p>
+    </article>
+
+    <article class="fe">
+      <svg viewBox="0 0 120 64" aria-hidden="true"><rect x="4" y="6" width="112" height="52" class="bx"/><path class="ln" d="M4 16 H116"/><circle cx="10" cy="11" r="2"/><circle cx="17" cy="11" r="2"/><rect x="74" y="20" width="38" height="34" class="bx f"/><path class="ln" d="M10 26 H60 M10 34 H52 M10 42 H58"/><rect x="100" y="8" width="7" height="6" class="bx o"/></svg>
+      <code>manifest_version: 3</code>
+      <h3>Chrome extensions</h3>
+      <p>Built the Chrome extension for the Lytics customer data platform and owned it from first release to v2.0. That meant content scripts, a side panel, messaging between them and the page, Manifest V3, and automated test suites so releases stopped being scary.</p>
+    </article>
+
+    <article class="fe">
+      <svg viewBox="0 0 120 64" aria-hidden="true"><rect x="4" y="4" width="30" height="56" class="bx"/><path class="ln" d="M9 14 H28 M9 22 H24 M9 30 H28 M9 38 H22"/><rect x="7" y="27" width="24" height="6" class="bx f"/><rect x="44" y="14" width="30" height="12" rx="6" class="bx f"/><rect x="80" y="14" width="30" height="12" rx="6" class="bx"/><rect x="44" y="36" width="66" height="12" class="bx"/></svg>
+      <code>Button.stories.tsx</code>
+      <h3>React Storybook components</h3>
+      <p>Reusable React components such as inputs, modals, tables and pickers, each written in isolation with stories for every state. Storybook became where design and engineering reviewed changes, before they reached any product screen.</p>
+    </article>
+
+    <article class="fe">
+      <svg viewBox="0 0 120 64" aria-hidden="true"><rect x="4" y="6" width="16" height="16" class="sw a"/><rect x="22" y="6" width="16" height="16" class="sw b"/><rect x="40" y="6" width="16" height="16" class="sw c"/><text x="64" y="20" class="big">Aa</text><path class="ln" d="M4 34 H8 M4 40 H12 M4 46 H20 M4 52 H36"/><rect x="48" y="32" width="68" height="24" class="bx"/><path class="ln" d="M54 44 H74"/></svg>
+      <code>--space-3: 12px;</code>
+      <h3>Front-end design system</h3>
+      <p>I compared three competing styling approaches, then wrote the CSS conventions, tokens and the accessibility standard that teams beyond mine adopted. Contributed to two shared component libraries, so one product looks and behaves like one product.</p>
+    </article>
+  </div>
+</section>
+
+
 <!-- ============ REFERENCES ============ -->
 <section id="refs" class="sec">
-  <h2 class="sec-h"><span class="num">§4</span> References<small>external links to the work in the field</small></h2>
+  <h2 class="sec-h"><span class="num">§5</span> References<small>external links to the work in the field</small></h2>
   <ol class="refs">
     <li><a href="https://www.contentstack.com/docs/developers/branches" target="_blank" rel="noopener">Branches, Contentstack docs</a><span>the branching &amp; merge system I designed and shipped</span></li>
     <li><a href="https://www.contentstack.com/docs/developers/apis/content-management-api" target="_blank" rel="noopener">Content Management API reference</a><span>the public API I maintained for three years</span></li>
     <li><a href="https://www.lytics.com/" target="_blank" rel="noopener">Lytics customer data platform</a><span>home of the recommendations work &amp; Chrome extension</span></li>
     <li><a href="https://modelcontextprotocol.io/" target="_blank" rel="noopener">Model Context Protocol</a><span>how the Product Wiki gets to agents</span></li>
-    <li><a href="https://www.mongodb.com/docs/manual/release-notes/7.0-compatibility/" target="_blank" rel="noopener">MongoDB 7.0 compatibility changes</a><span>the 14-month upgrade, in someone else's words</span></li>
+    <li><a href="https://storybook.js.org/" target="_blank" rel="noopener">Storybook</a><span>where the component library is documented and reviewed</span></li>
     <li><a href="https://playwright.dev/" target="_blank" rel="noopener">Playwright</a><span>how I test the things above</span></li>
   </ol>
 </section>
 
 <!-- ============ PUBLISH ============ -->
 <section id="publish" class="sec publish">
-  <h2 class="sec-h"><span class="num">§5</span> Publish<small>to your inbox, in every region</small></h2>
+  <h2 class="sec-h"><span class="num">§6</span> Publish<small>to your inbox, in every region</small></h2>
   <p class="big">Building something with content, APIs, or agents? <em>Let's talk.</em></p>
 
   <div class="pub">
