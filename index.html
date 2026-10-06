@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anup Singh — Proof Sheet</title>
+<meta name="description" content="Anup Singh, senior full stack engineer. Ten years building a headless CMS: content APIs on Node.js, editing apps in React, and the knowledge layer AI agents read from.">
+<meta property="og:title" content="Anup Singh — Proof Sheet">
+<meta property="og:description" content="Senior full stack engineer. Node.js, React, headless CMS, AI-assisted development.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&family=Martian+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg class="grain" aria-hidden="true"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="3" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .55 0"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
+
+<div class="crop tl"></div><div class="crop tr"></div><div class="crop bl"></div><div class="crop br"></div>
+
+<header class="slug">
+  <span>entry/<b>anup-singh</b></span>
+  <span class="hide-sm">locale en-in</span>
+  <span class="hide-sm">content_type: engineer</span>
+  <span>status <i class="dot"></i> published</span>
+  <nav>
+    <a href="#log">log</a><a href="#schema">schema</a><a href="#specimens">work</a><a href="#refs">refs</a><a href="#publish">contact</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-meta">
+    <span>Proof Nº 10</span>
+    <span>Pune, Maharashtra · 18.52° N</span>
+    <span>Set 2016 → 2026</span>
+  </div>
+
+  <h1 class="name">
+    <span class="line">Anup</span>
+    <span class="line indent">Singh<sup>†</sup></span>
+  </h1>
+
+  <div class="hero-grid">
+    <p class="role">Senior full stack engineer.<br><em>Node.js &amp; React. Headless CMS. AI&#8209;assisted development.</em></p>
+
+    <div class="diffbox" id="diff">
+      <div class="diff-head">
+        <span class="mono">compare</span>
+        <div class="branches" role="tablist" aria-label="Compare versions">
+          <button role="tab" data-v="2016" aria-selected="false">v2016</button>
+          <span class="arrow">⇄</span>
+          <button role="tab" data-v="2026" aria-selected="true">v2026</button>
+        </div>
+      </div>
+      <ol class="diff-body" id="diffBody">
+        <li><span class="k">title</span> <del>Application Engineer</del> <ins>Senior Software Engineer II</ins></li>
+        <li><span class="k">editor</span> <del>AngularJS</del> <ins>React, owned for 6 years</ins></li>
+        <li><span class="k">database</span> <del>MongoDB 6</del> <ins>MongoDB 7, no regressions shipped</ins></li>
+        <li><span class="k">api</span> <del>contributor</del> <ins>primary maintainer, 3 years</ins></li>
+        <li><span class="k">agents</span> <del>null</del> <ins>read product context via MCP</ins></li>
+      </ol>
+      <button class="merge" id="merge">Merge → main</button>
+    </div>
+  </div>
+
+  <p class="footnote"><sup>†</sup> Ten years on one product, a headless CMS. I maintain the public API that every customer integration is built on, and I owned the front end of the React app content authors use every day. Lately I build the knowledge layer that AI agents read from.</p>
+</section>
+
+<!-- ============ FIGURES ============ -->
+<section class="figures" aria-label="Numbers">
+  <div><b data-count="10">10</b><span>years on one platform. That's long enough to live with your own decisions.</span></div>
+  <div><b data-count="3">3</b><span>years as primary maintainer of the public content API</span></div>
+  <div><b data-count="6">6</b><span>years owning the React editor's front end, across regions</span></div>
+  <div><b data-count="14">14</b><span>months to take a live API from MongoDB 6 to 7</span></div>
+  <div><b data-count="4">4</b><span>months from PRD to shipped, full stack</span></div>
+</section>
+
+<!-- ============ LOG ============ -->
+<section id="log" class="sec">
+  <h2 class="sec-h"><span class="num">§1</span> Commit log<small>git log --graph --author=anup</small></h2>
+
+  <ol class="log">
+    <li class="c head">
+      <span class="hash">a1f9e04</span>
+      <div>
+        <h3>Senior Software Engineer II <span class="tag">HEAD → main</span></h3>
+        <p class="where">Contentstack · Pune · Sep 2024 – now</p>
+        <ul>
+          <li>Designed and shipped <strong>content branching with compare&#8209;and&#8209;merge</strong> across the API service, the permissions layer and the client. Wrote the public API spec and took it through cross-functional sign-off.</li>
+          <li>Took a production API from <strong>MongoDB 6 to 7</strong>. Documented the query-level breakages, including a regex change that broke listing endpoints, and saw the 14-month effort through to the end.</li>
+          <li>Built the <strong>Product Wiki</strong>, the single source of product context for developer tools, apps and the AI agents that work on them.</li>
+        </ul>
+      </div>
+    </li>
+    <li class="c">
+      <span class="hash">7c2b31d</span>
+      <div>
+        <h3>Senior Software Engineer I</h3>
+        <p class="where">Contentstack · Feb 2022 – Sep 2024</p>
+        <ul>
+          <li>Wrote the PRD and TRD for content recommendations onboarding, then shipped native import and a <strong>recommendation simulator</strong> full stack in 4 months.</li>
+          <li>Took ownership of the <strong>Lytics Chrome extension</strong> within 2 months of the acquisition and carried it from first release to v2.0 with automated test suites.</li>
+          <li>Closed access-control and throttling findings from internal security testing. Led a Snyk cleanup across the marketplace and built the shared inventory 4 other engineers tracked against.</li>
+        </ul>
+      </div>
+    </li>
+    <li class="c">
+      <span class="hash">3e80aa7</span>
+      <div>
+        <h3>Application Engineer</h3>
+        <p class="where">Contentstack · Mumbai → Pune · May 2016 – Mar 2022</p>
+        <ul>
+          <li>Migrated the core CMS editing app <strong>from AngularJS to React</strong>. Content authors use it every day.</li>
+          <li>Became primary maintainer of the <strong>Content Management API</strong> on Node.js, Express and MongoDB, and shipped querying and filtering, asset publishing and per-plan quotas.</li>
+          <li>Compared three styling approaches, then wrote the CSS conventions and the accessibility standard that teams beyond mine adopted.</li>
+        </ul>
+      </div>
+    </li>
+    <li class="c fork">
+      <span class="hash">0b4d1c9</span>
+      <div>
+        <h3>Associate Software Engineer</h3>
+        <p class="where">Larsen &amp; Toubro Infotech · Mumbai · 2013 – Apr 2016</p>
+        <ul>
+          <li>Ran the front end for an <strong>HBO</strong> engagement, from features through testing to maintenance. Before that, the graduate program: SQL, Java, BFSI and QA.</li>
+        </ul>
+      </div>
+    </li>
+    <li class="c root">
+      <span class="hash">init</span>
+      <div>
+        <h3>BCA, Tilak Maharashtra Vidyapeeth</h3>
+        <p class="where">Pune · 2012</p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- ============ SCHEMA ============ -->
+<section id="schema" class="sec">
+  <h2 class="sec-h"><span class="num">§2</span> <span>Content type: <em>engineer</em></span><small>fields, typed. Hover a row.</small></h2>
+
+  <div class="schema">
+    <div class="row"><code>languages</code><span class="type">multi_text</span><p>JavaScript (ES6+), TypeScript, HTML5, CSS3, PostCSS, Go <i>(working)</i></p></div>
+    <div class="row"><code>backend</code><span class="type">reference[]</span><p>Node.js, Express, NestJS, REST design, gRPC, Kafka, MongoDB, PostgreSQL, Redis, OAuth, authN/authZ, npm packages</p></div>
+    <div class="row"><code>frontend</code><span class="type">group</span><p>React, design systems, reusable component libraries, accessibility standards, Vite</p></div>
+    <div class="row"><code>cloud_ci</code><span class="type">select</span><p>AWS, GCP, Kubernetes, GoCD, multi-region release</p></div>
+    <div class="row"><code>testing</code><span class="type">boolean = true</span><p>Playwright end-to-end, unit tests, Snyk remediation</p></div>
+    <div class="row"><code>ai_assisted</code><span class="type">json <b class="new">new</b></span><p>Claude Code, Claude Design, Cowork, Model Context Protocol, agent skills, AI-assisted review &amp; test generation</p></div>
+    <div class="row"><code>domain</code><span class="type">taxonomy</span><p>DXP, headless CMS, content modeling, localization, publishing workflows, multi-tenant SaaS, CDP</p></div>
+    <div class="row"><code>practice</code><span class="type">rich_text</span><p>System design, microservices, PRDs &amp; TRDs, code review, Agile</p></div>
+  </div>
+</section>
+
+<!-- ============ SPECIMENS ============ -->
+<section id="specimens" class="sec">
+  <h2 class="sec-h"><span class="num">§3</span> Specimens<small>three things worth explaining</small></h2>
+
+  <article class="spec">
+    <div class="spec-n">A</div>
+    <div class="spec-body">
+      <h3>Branching, compare &amp; merge</h3>
+      <p class="stack">Node.js · Express · MongoDB · gRPC</p>
+      <p>Content teams work on a parallel copy of the entire content set, see an exact diff against live, and merge with the conflict strategy they choose. I owned it across the API, the permissions layer and the client.</p>
+    </div>
+    <figure class="spec-fig" aria-hidden="true">
+      <svg viewBox="0 0 220 120"><path d="M10 90 H210" class="ln"/><path d="M50 90 C70 90 70 35 95 35 H150 C175 35 175 90 195 90" class="ln br"/><circle cx="50" cy="90" r="5"/><circle cx="120" cy="35" r="5" class="o"/><circle cx="195" cy="90" r="7" class="m"/><text x="8" y="112">main</text><text x="98" y="22">feature</text></svg>
+    </figure>
+  </article>
+
+  <article class="spec">
+    <div class="spec-n">B</div>
+    <div class="spec-body">
+      <h3>Recommendations onboarding</h3>
+      <p class="stack">React · TypeScript · Node.js · MongoDB · OAuth</p>
+      <p>Brought CMS content into a customer data platform so it could recommend live entries to visitors. Schema mapping, import and export inside the product, and a simulator that shows what a given visitor would see.</p>
+    </div>
+    <figure class="spec-fig" aria-hidden="true">
+      <svg viewBox="0 0 220 120"><rect x="10" y="20" width="60" height="80" class="bx"/><rect x="150" y="20" width="60" height="80" class="bx"/><path d="M70 40 H150 M70 60 H150 M70 80 H150" class="ln dash"/><text x="18" y="114">cms</text><text x="160" y="114">cdp</text></svg>
+    </figure>
+  </article>
+
+  <article class="spec">
+    <div class="spec-n">C</div>
+    <div class="spec-body">
+      <h3>Product Wiki</h3>
+      <p class="stack">Knowledge architecture · MCP · agent context</p>
+      <p>Product documentation was scattered. I turned it into a knowledge layer that AI agents query during development, so they answer from sources instead of guessing.</p>
+    </div>
+    <figure class="spec-fig" aria-hidden="true">
+      <svg viewBox="0 0 220 120"><g class="ln"><path d="M110 60 L40 25 M110 60 L40 95 M110 60 L180 25 M110 60 L180 95 M110 60 L110 12"/></g><circle cx="110" cy="60" r="10" class="m"/><circle cx="40" cy="25" r="4"/><circle cx="40" cy="95" r="4"/><circle cx="180" cy="25" r="4"/><circle cx="180" cy="95" r="4"/><circle cx="110" cy="12" r="4" class="o"/></svg>
+    </figure>
+  </article>
+
+  <aside class="award">
+    <span class="mono">recognition</span>
+    <p><b>Rising Star Award</b>, Contentstack. For engineering leadership, cross-team impact and consistent delivery.</p>
+  </aside>
+</section>
+
+<!-- ============ REFERENCES ============ -->
+<section id="refs" class="sec">
+  <h2 class="sec-h"><span class="num">§4</span> References<small>external links to the work in the field</small></h2>
+  <ol class="refs">
+    <li><a href="https://www.contentstack.com/docs/developers/branches" target="_blank" rel="noopener">Branches, Contentstack docs</a><span>the branching &amp; merge system I designed and shipped</span></li>
+    <li><a href="https://www.contentstack.com/docs/developers/apis/content-management-api" target="_blank" rel="noopener">Content Management API reference</a><span>the public API I maintained for three years</span></li>
+    <li><a href="https://www.lytics.com/" target="_blank" rel="noopener">Lytics customer data platform</a><span>home of the recommendations work &amp; Chrome extension</span></li>
+    <li><a href="https://modelcontextprotocol.io/" target="_blank" rel="noopener">Model Context Protocol</a><span>how the Product Wiki gets to agents</span></li>
+    <li><a href="https://www.mongodb.com/docs/manual/release-notes/7.0-compatibility/" target="_blank" rel="noopener">MongoDB 7.0 compatibility changes</a><span>the 14-month upgrade, in someone else's words</span></li>
+    <li><a href="https://playwright.dev/" target="_blank" rel="noopener">Playwright</a><span>how I test the things above</span></li>
+  </ol>
+</section>
+
+<!-- ============ PUBLISH ============ -->
+<section id="publish" class="sec publish">
+  <h2 class="sec-h"><span class="num">§5</span> Publish<small>to your inbox, in every region</small></h2>
+  <p class="big">Building something with content, APIs, or agents? <em>Let's talk.</em></p>
+
+  <div class="pub">
+    <button id="pubBtn" class="pub-btn">Publish entry</button>
+    <ul class="regions" id="regions">
+      <li data-r="na">North America <span>queued</span></li>
+      <li data-r="eu">Europe <span>queued</span></li>
+      <li data-r="az">Azure NA <span>queued</span></li>
+      <li data-r="in">Pune, IN <span>queued</span></li>
+    </ul>
+  </div>
+
+  <div class="contact" id="contact">
+    <a href="mailto:anupsingh24@gmail.com">anupsingh24@gmail.com</a>
+    <a href="https://www.linkedin.com/in/anupsingh24" target="_blank" rel="noopener">linkedin.com/in/anupsingh24</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="colophon">
+  <p>Colophon: set in Gloock, Newsreader &amp; Martian Mono. Hand-written HTML, no framework, nothing tracking you.</p>
+  <p class="mono">rev <span id="rev">10.0</span> · © 2026 Anup Singh</p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
